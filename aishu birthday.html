@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aishu ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg,#ffd6e7,#ff9ebf,#ffe4ed);
+    color: #a52859;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.page.active {
+    display: flex;
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #c2185b;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    background: #fff;
+    color: #d63375;
+    padding: 14px 28px;
+    font-size: 17px;
+    border-radius: 30px;
+    margin-top: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #d65b8955;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+.flower {
+    font-size: 65px;
+}
+
+.letter {
+    max-width: 650px;
+    width: 100%;
+    background: #fff8fb;
+    border-radius: 22px;
+    padding: 28px 22px;
+    line-height: 2;
+    font-size: 17px;
+    color: #74344d;
+    box-shadow: 0 8px 25px #b52d6240;
+    text-align: left;
+}
+
+.signature {
+    text-align: center;
+    color: #c2185b;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.hearts {
+    position: fixed;
+    bottom: -30px;
+    animation: rise 7s linear infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* FINAL SURPRISE PAGE */
+
+.surprise-container {
+    max-width: 650px;
+    width: 100%;
+    min-height: 280px;
+    background: #fff8fb;
+    border-radius: 25px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 30px #b52d6255;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.surprise-line {
+    opacity: 0;
+    color: #a52859;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.8;
+}
+
+#page5.active .line1 {
+    animation: revealLine 2s ease forwards;
+    animation-delay: 1s;
+}
+
+#page5.active .line2 {
+    animation: revealLine 2s ease forwards;
+    animation-delay: 5s;
+}
+
+#page5.active .line3 {
+    animation: revealLine 2s ease forwards,
+               heartbeat 1.2s infinite;
+    animation-delay: 9s, 11s;
+}
+
+@keyframes revealLine {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+.final-hearts {
+    font-size: 30px;
+    margin-top: 20px;
+    animation: heartbeat 1.2s infinite;
+}
+
+.final-text {
+    color: #c2185b;
+    margin-top: 20px;
+    animation: revealLine 2s ease forwards;
+    animation-delay: 12s;
+    opacity: 0;
+}
+
+@media(max-width:480px) {
+    .surprise-line {
+        font-size: 17px;
+    }
+
+    .surprise-container {
+        padding: 25px 15px;
+    }
+}
+
+.last-love {
+    background: #fff8fb;
+    padding: 35px 20px;
+    border-radius: 25px;
+    color: #c2185b;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.5;
+    box-shadow: 0 8px 30px #b52d6255;
+    opacity: 0;
+}
+
+#page6.active .last-love {
+    animation: finalReveal 3s ease forwards;
+    animation-delay: 1s;
+}
+
+.last-heart {
+    font-size: 40px;
+    margin: 25px;
+    animation: heartbeat 1s infinite;
+}
+
+.last-title,
+.last-message {
+    color: #c2185b;
+}
+
+@keyframes finalReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.love-kiss {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.love-text {
+    font-size: 27px;
+    font-weight: bold;
+    color: #c2185b;
+    animation: heartbeat 1s infinite;
+}
+
+.kiss-text {
+    font-size: 30px;
+    margin-top: 20px;
+    animation: finalReveal 2s ease forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+    <div class="flower">🌸🌷🌸</div>
+
+    <h1>HAPPY BIRTHDAY<br>PAPPEY ❤️</h1>
+
+    <div class="flower">🎂💗</div>
+
+    <button onclick="nextPage(2)">
+        Click Here 💌
+    </button>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+
+    <div class="flower">💌🌹</div>
+
+   
+
+    <div class="letter">
+        Happy birthday Aishu ma..💋
+
+        Iniki vanthu en kolandhaiku poranthanalu
+        enala mudira alavuku unagala sandhosama
+        vechipan cheirngala . 🤎.
+
+        Ithu varaikum epdi iruntha athulam theriyathu
+        inimey neenga sandhosama mattum tha
+        irukano .💛
+
+        Sila time sad ahh vu irukalam situation
+        etha mari athuku epyum sad ah iruka kudathu
+        cheriya .💙
+
+        Na irukan la ungaluku sad la ava kudathu
+        en pattu. 💕
+
+        vazhkaila ellam nantha unuku first ahh
+        irukanoo cheriya purincha .💗
+
+        Ithu vanthu ungaluku 17th birthday
+        adutha varsham en thangoo 18 ava pothu
+        avlothan jolly.💖
+
+        Epyumey happy iru thangameyy cheriya
+        na irukan unkuda unuku enna pannano
+        thonutho bayapudama seii na irukan
+        pathukalam ena analum . ❤️
+
+        <div class="signature">
+            LOVE YOU AISHU<br>
+            ENKIRA PREETHI 🫂🫀
+        </div>
+    </div>
+
+    <button onclick="nextPage(3)">
+        One More Surprise 💖
+    </button>
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+
+    <div class="flower">💗🌸💗</div>
+
+    <h1>My boobs girl❤️</h1>
+
+    <div class="letter">
+
+        En chella kutyy ku poranthanalu..🤌🤌
+
+        en ammu kutyy ithu .💗💗
+
+        en pattu kutyy ithu 💙💙
+
+        en thangoo neenga💛
+
+        en vairoo neenga 💎
+
+        enuku sami thantha varam neenga 🤌🤌😍
+
+        en busuku busuku neenga ✊
+
+        ena pups ma neenga 🤌
+
+        en thoppa kutty neenga🤌💋
+
+        en mutta kanni neenga🤌🤌😘
+
+        enoda usuru neenga 🤌🤌🫀
+
+        en ulagam neenga🌎💋
+
+        enoda kutty paapa neenga 🤌🤌💋
+
+        enoda muthal ponnu neenga👧💋
+
+        en pokkishyam neenga🤌💋
+
+        ungala kailey vechi pathupan
+        ungala engyum vida matan
+        neenga na enuku avlo ishtam💋🤌🫂
+
+        
+
+    </div>
+
+   <button onclick="nextPage(4)">
+    Our Memories 📸
+</button>
+
+</section>
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+
+    <div class="flower">🌸📸🌸</div>
+
+    <h1>Our Memories ❤️</h1>
+
+    <p style="font-size:18px;">
+        Ellam photovum oru oru time nee ena meet panra apo eduthathu💗
+    </p>
+
+    <div style="
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+        max-width:500px;
+        width:100%;
+        margin-top:25px;
+    ">
+
+        <img src="./photos/aishu1.jpg"
+        style="width:100%;height:180px;object-fit:cover;border-radius:18px;">
+
+        <img src="./photos/aishu2.jpg"
+        style="width:100%;height:180px;object-fit:cover;border-radius:18px;">
+
+        <img src="./photos/aishu3.jpg"
+        style="width:100%;height:180px;object-fit:cover;border-radius:18px;">
+
+        <img src="./photos/aishu4.jpg"
+        style="width:100%;height:180px;object-fit:cover;border-radius:18px;">
+
+    </div>
+
+  
+
+    <p>Ino namba naraya photo edukalam🫂</p>
+
+    <button onclick="nextPage(5)">
+    One Last Surprise 🫂❤️
+    </button>
+
+</section>
+
+
+<script>
+
+function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+    const button = document.getElementById("musicButton");
+
+    if (music.paused) {
+        music.play();
+        button.innerHTML = "⏸️ Pause Music";
+    } else {
+        music.pause();
+        button.innerHTML = "🎵 Play Music ❤️";
+    }
+}
+
+function nextPage(number) {
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("page" + number)
+        .classList.add("active");
+
+    window.scrollTo(0,0);
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "hearts";
+    heart.innerHTML = ["❤️","💕","🌸","💗"][Math.floor(Math.random()*4)];
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.fontSize = (18 + Math.random()*20) + "px";
+    heart.style.animationDuration = (4 + Math.random()*4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton"
+onclick="toggleMusic()"
+style="
+position:fixed;
+top:15px;
+right:15px;
+z-index:100;
+margin:0;
+">
+🎵 Play Music ❤️
+</button>
+
+<!-- PAGE 5 - FINAL SURPRISE -->
+<section class="page" id="page5">
+
+    <div class="flower">🌸💗🌸</div>
+
+    <h1>My Special Surprise ❤️</h1>
+
+    <div class="surprise-container">
+
+        <div class="surprise-line line1">
+            Naan yaar epdi irunthalum sari endru
+            ennai etru kondu ennai kaadhalithu
+            kondirukkiraal yaar aval? ❤️
+        </div>
+
+        <div class="surprise-line line2">
+            Yaar antha devathai? 🌹
+        </div>
+
+        <div class="surprise-line line3">
+            Avalthan ennaval... ❤️
+            <br><br>
+            ENODA AISHU! 🫂💗
+        </div>
+
+    </div>
+
+    <div class="final-hearts">
+        ❤️ 💕 💗 🫀 💖
+    </div>
+
+    <h2 class="final-text">
+        Always Special To Me ❤️
+    </h2>
+
+   <button onclick="nextPage(6)">
+    My Last Promise ❤️
+</button>
+
+</section>
+
+<!-- PAGE 6 - FOREVER LOVE -->
+<section class="page" id="page6">
+
+    <div class="flower">🌹❤️🌹</div>
+
+    <h1 class="last-title">
+        One Promise 🫂
+    </h1>
+
+    <div class="last-love">
+        EN KADHAL
+        <br><br>
+        EPPОYUM UNAKKU
+        <br><br>
+        SAAVARA VARAIKUM ❤️
+    </div>
+
+    <div class="last-heart">
+        💗 🫀 💗
+    </div>
+
+    <h2 class="last-message">
+        HAPPY BIRTHDAY AISHU ❤️
+    </h2>
+
+<div class="love-kiss">
+    <div class="love-text">
+        I LOB YUW AISHU ❤️
+    </div>
+
+    <div class="kiss-text">
+        UMMAAAAHHHH 😘😘😘
+    </div>
+</div>
+
+    <button onclick="nextPage(1)">
+        Relive Our Memories 🌸
+    </button>
+
+</section>
+
+</body>
+</html>
